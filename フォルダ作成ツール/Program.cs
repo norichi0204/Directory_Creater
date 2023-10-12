@@ -12,13 +12,13 @@ namespace フォルダ作成ツール
     {
         static void Main(string[] args)
         {
-           const string 大フォルダ = "成果物\\";
+           const string 親フォルダ = "成果物\\";
         
             StreamReader sr = new StreamReader("フォルダ名.txt", Encoding.GetEncoding("Shift_JIS"));
 
             while (sr.Peek() != -1)
             {          
-                Directory.CreateDirectory(大フォルダ + sr.ReadLine());
+                Directory.CreateDirectory(親フォルダ + sr.ReadLine());
             }
 
             sr.Close();
